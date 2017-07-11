@@ -1,0 +1,15 @@
+.page-content{
+    margin: 20px;
+}
+
+table tbody tr td input {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+}
+table tbody tr td {
+    margin: 0;
+    padding: 0;
+}

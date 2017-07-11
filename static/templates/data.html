@@ -1,0 +1,50 @@
+<div class="page-content" ng-view>
+    <div class="row">
+        <div class="col col-md-12">
+            <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <th class="text-center">Id</th>
+                        <th class="text-center">Date</th>
+                        <th class="text-center">{{ headers.sensor_1 }}</th>
+                        <th class="text-center">{{ headers.sensor_2 }}</th>
+                        <th class="text-center">{{ headers.sensor_3 }}</th>
+                        <th class="text-center">{{ headers.sensor_4 }}</th>
+                        <th class="text-center">{{ headers.sensor_5 }}</th>
+                        <th class="text-center">{{ headers.sensor_6 }}</th>
+                        <th class="text-center">Pump State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in items">
+                        <td class="text-center">{{item.id}}</td>
+                        <td class="text-center">{{render_date(item.date_created, item.time_created)}}</td>
+                        <td class="text-center">{{item.sensor_1}}</td>
+                        <td class="text-center">{{item.sensor_2}}</td>
+                        <td class="text-center">{{item.sensor_3}}</td>
+                        <td class="text-center">{{item.sensor_4}}</td>
+                        <td class="text-center">{{item.sensor_5}}</td>
+                        <td class="text-center">{{item.sensor_6}}</td>
+                        <td class="text-center">
+                            <span ng-if="item.pump_on === 1" class="label label-success">On</span>
+                            <span ng-if="item.pump_on === 0" class="label label-danger">Off</span>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Averages:</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

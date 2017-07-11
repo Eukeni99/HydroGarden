@@ -1,0 +1,40 @@
+<div class="page-content">
+    <div class="row">
+        <div class="col col-md-8">
+            <table class="table table-responsive table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Field</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Formula</th>
+                        <th class="text-center">Data Type</th>
+                        <th class="text-center"> Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="sensor in sensors">
+                        <td class="text-center">{{ sensor.sensor_field }}</td>
+                        <td>
+                            <input type="text" class="form-control" ng-model="sensor.name"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" ng-model="sensor.formula"/>
+                        </td>
+                        <td>
+                            <select class="form-control" ng-model="sensor.data_type" ng-options="type.name for type in data_types track by type.value">
+                            </select>
+                        </td>
+                        <td class="text-center">
+                            <button type="button" class="btn btn-danger btn-xs">Clear</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-8">
+            <button type="button" class="btn btn-primary pull-right" ng-click="post_data()">Save</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ruger Hydroponics</title>
+        <link rel="stylesheet" href="/static/css/bootstrap.css" />
+        <link rel="stylesheet" href="/static/css/app.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+        <script src="/static/moment.min.js"></script>
+        <script src="/static/app.js"></script>
+        <script src="/static/controllers.js"></script>
+  </head>
+  <body ng-app="RugerHydro">
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="#">RugerTek Hydro</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li><a ng-href="#/">Home</a></li>
+                <li><a ng-href="#/data">Data</a></li>
+                <li><a ng-href="#/config">Configuration</a></li>
+                <li><a ng-href="#/settings">Settings</a></li>
+              </ul>
+          </div>
+    </nav>
+    <div class="page-wrapper" ui-view>
+
+    </div>
+  </body>
+</html>
